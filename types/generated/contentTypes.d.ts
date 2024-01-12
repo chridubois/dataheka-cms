@@ -820,6 +820,13 @@ export interface ApiCustomerCaseCustomerCase extends Schema.CollectionType {
     feedback: Attribute.Text;
     contact_first_name: Attribute.String;
     contact_role: Attribute.String;
+    context: Attribute.RichText;
+    missions: Attribute.RichText;
+    stack: Attribute.Relation<
+      'api::customer-case.customer-case',
+      'oneToMany',
+      'api::tool.tool'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

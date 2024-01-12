@@ -37,6 +37,17 @@
     },
     "contact_role": {
       "type": "string"
+    },
+    "context": {
+      "type": "richtext"
+    },
+    "missions": {
+      "type": "richtext"
+    },
+    "stack": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tool.tool"
     }
   }
 }
