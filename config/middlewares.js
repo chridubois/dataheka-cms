@@ -1,6 +1,3 @@
-const BUCKET = process.env.YANDEX_CLOUD_BUCKET;
-const BUCKET_URL = `https://${BUCKET}.storage.yandexcloud.net`;
-
 module.exports = [
   'strapi::errors',
   'strapi::cors',
@@ -17,8 +14,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', BUCKET_URL],
-          'media-src': ["'self'", 'data:', 'blob:', BUCKET_URL],
+          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           upgradeInsecureRequests: null,
         },
       },
