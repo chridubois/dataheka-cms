@@ -870,6 +870,11 @@ export interface ApiCustomerCaseCustomerCase extends Schema.CollectionType {
       'oneToMany',
       'api::tool.tool'
     >;
+    categories: Attribute.Relation<
+      'api::customer-case.customer-case',
+      'oneToMany',
+      'api::category.category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
