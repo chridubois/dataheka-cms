@@ -784,6 +784,18 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     published_date: Attribute.DateTime;
     image: Attribute.Media;
     content: Attribute.RichText;
+    tools: Attribute.Relation<
+      'api::article.article',
+      'oneToMany',
+      'api::tool.tool'
+    >;
+    duration: Attribute.Integer;
+    author: Attribute.String;
+    categories: Attribute.Relation<
+      'api::article.article',
+      'oneToMany',
+      'api::category.category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -795,6 +807,37 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::article.article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCategoryCategory extends Schema.CollectionType {
+  collectionName: 'categories';
+  info: {
+    singularName: 'category';
+    pluralName: 'categories';
+    displayName: 'Category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::category.category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::category.category',
       'oneToOne',
       'admin::user'
     > &
@@ -887,6 +930,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::article.article': ApiArticleArticle;
+      'api::category.category': ApiCategoryCategory;
       'api::customer-case.customer-case': ApiCustomerCaseCustomerCase;
       'api::tool.tool': ApiToolTool;
     }

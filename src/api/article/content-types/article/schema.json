@@ -31,6 +31,22 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "tools": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tool.tool"
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "author": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }
