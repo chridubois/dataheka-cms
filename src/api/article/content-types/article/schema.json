@@ -40,13 +40,15 @@
     "duration": {
       "type": "integer"
     },
-    "author": {
-      "type": "string"
-    },
     "categories": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::category.category"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
     }
   }
 }

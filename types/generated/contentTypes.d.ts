@@ -790,11 +790,15 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'api::tool.tool'
     >;
     duration: Attribute.Integer;
-    author: Attribute.String;
     categories: Attribute.Relation<
       'api::article.article',
       'oneToMany',
       'api::category.category'
+    >;
+    author: Attribute.Relation<
+      'api::article.article',
+      'oneToOne',
+      'admin::user'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
