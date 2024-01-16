@@ -893,6 +893,29 @@ export interface ApiCustomerCaseCustomerCase extends Schema.CollectionType {
   };
 }
 
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    content: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiToolTool extends Schema.CollectionType {
   collectionName: 'tools';
   info: {
@@ -937,6 +960,7 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle;
       'api::category.category': ApiCategoryCategory;
       'api::customer-case.customer-case': ApiCustomerCaseCustomerCase;
+      'api::page.page': ApiPagePage;
       'api::tool.tool': ApiToolTool;
     }
   }
