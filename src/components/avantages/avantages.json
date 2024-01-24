@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_avantages_avantages",
+  "info": {
+    "displayName": "avantages",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
