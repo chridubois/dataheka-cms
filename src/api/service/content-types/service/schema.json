@@ -49,6 +49,9 @@
     },
     "slug": {
       "type": "string"
+    },
+    "priority": {
+      "type": "integer"
     }
   }
 }

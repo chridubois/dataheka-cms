@@ -973,6 +973,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     delay: Attribute.String;
     offer_details: Attribute.Component<'offer-details.offer-details', true>;
     slug: Attribute.String;
+    priority: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
