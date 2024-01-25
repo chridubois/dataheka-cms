@@ -971,6 +971,8 @@ export interface ApiServiceService extends Schema.CollectionType {
     description: Attribute.RichText;
     avantages: Attribute.Component<'avantages.avantages', true>;
     delay: Attribute.String;
+    offer_details: Attribute.Component<'offer-details.offer-details', true>;
+    slug: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

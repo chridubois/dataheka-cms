@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_offer_details_offer_details",
+  "info": {
+    "displayName": "offer_details",
+    "icon": "doctor"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

@@ -40,6 +40,15 @@
     },
     "delay": {
       "type": "string"
+    },
+    "offer_details": {
+      "displayName": "offer_details",
+      "type": "component",
+      "repeatable": true,
+      "component": "offer-details.offer-details"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
