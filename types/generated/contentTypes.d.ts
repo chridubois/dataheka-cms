@@ -930,6 +930,53 @@ export interface ApiCustomerCaseCustomerCase extends Schema.CollectionType {
   };
 }
 
+export interface ApiKeywordKeyword extends Schema.CollectionType {
+  collectionName: 'keywords';
+  info: {
+    singularName: 'keyword';
+    pluralName: 'keywords';
+    displayName: 'Keyword';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    keyword: Attribute.String;
+    image: Attribute.Media;
+    content: Attribute.RichText;
+    services: Attribute.Relation<
+      'api::keyword.keyword',
+      'oneToMany',
+      'api::service.service'
+    >;
+    categories: Attribute.Relation<
+      'api::keyword.keyword',
+      'oneToMany',
+      'api::category.category'
+    >;
+    tools: Attribute.Relation<
+      'api::keyword.keyword',
+      'oneToMany',
+      'api::tool.tool'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::keyword.keyword',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::keyword.keyword',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
@@ -1037,6 +1084,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::certification.certification': ApiCertificationCertification;
       'api::customer-case.customer-case': ApiCustomerCaseCustomerCase;
+      'api::keyword.keyword': ApiKeywordKeyword;
       'api::page.page': ApiPagePage;
       'api::service.service': ApiServiceService;
       'api::tool.tool': ApiToolTool;
