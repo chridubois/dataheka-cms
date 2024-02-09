@@ -802,7 +802,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'oneToOne',
       'admin::user'
     >;
-    howto: Attribute.JSON;
+    howto: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
