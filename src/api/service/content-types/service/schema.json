@@ -52,6 +52,9 @@
     },
     "priority": {
       "type": "integer"
+    },
+    "prestation": {
+      "type": "boolean"
     }
   }
 }

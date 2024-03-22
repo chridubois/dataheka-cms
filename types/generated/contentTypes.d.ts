@@ -1022,6 +1022,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     offer_details: Attribute.Component<'offer-details.offer-details', true>;
     slug: Attribute.String;
     priority: Attribute.Integer;
+    prestation: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
