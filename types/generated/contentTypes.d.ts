@@ -803,6 +803,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
       'admin::user'
     >;
     howtobloc: Attribute.JSON;
+    cta_text: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
