@@ -4,7 +4,8 @@
   "info": {
     "singularName": "keyword",
     "pluralName": "keywords",
-    "displayName": "Keyword"
+    "displayName": "Keyword",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,15 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "content": {
       "type": "richtext"
@@ -41,6 +43,18 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tool.tool"
+    },
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "text"
+    },
+    "seo_keyword": {
+      "type": "text"
+    },
+    "howtoblock": {
+      "type": "json"
     }
   }
 }

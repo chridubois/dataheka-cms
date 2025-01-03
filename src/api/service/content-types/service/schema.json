@@ -55,6 +55,12 @@
     },
     "prestation": {
       "type": "boolean"
+    },
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "text"
     }
   }
 }

@@ -804,6 +804,9 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     >;
     howtobloc: Attribute.JSON;
     cta_text: Attribute.String;
+    seo_title: Attribute.String;
+    seo_description: Attribute.Text;
+    seo_keyword: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -938,6 +941,7 @@ export interface ApiKeywordKeyword extends Schema.CollectionType {
     singularName: 'keyword';
     pluralName: 'keywords';
     displayName: 'Keyword';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -961,6 +965,10 @@ export interface ApiKeywordKeyword extends Schema.CollectionType {
       'oneToMany',
       'api::tool.tool'
     >;
+    seo_title: Attribute.String;
+    seo_description: Attribute.Text;
+    seo_keyword: Attribute.Text;
+    howtoblock: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1024,6 +1032,8 @@ export interface ApiServiceService extends Schema.CollectionType {
     slug: Attribute.String;
     priority: Attribute.Integer;
     prestation: Attribute.Boolean;
+    seo_title: Attribute.String;
+    seo_description: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

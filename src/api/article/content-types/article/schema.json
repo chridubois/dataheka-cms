@@ -55,6 +55,15 @@
     },
     "cta_text": {
       "type": "string"
+    },
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "text"
+    },
+    "seo_keyword": {
+      "type": "text"
     }
   }
 }
