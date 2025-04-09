@@ -53,6 +53,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::category.category"
+    },
+    "score": {
+      "type": "integer"
     }
   }
 }

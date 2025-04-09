@@ -917,6 +917,7 @@ export interface ApiCustomerCaseCustomerCase extends Schema.CollectionType {
       'oneToMany',
       'api::category.category'
     >;
+    score: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
