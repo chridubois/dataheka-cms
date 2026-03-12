@@ -807,6 +807,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     seo_title: Attribute.String;
     seo_description: Attribute.Text;
     seo_keyword: Attribute.Text;
+    seo_h1: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
