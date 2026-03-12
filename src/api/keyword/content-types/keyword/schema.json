@@ -53,6 +53,9 @@
     "seo_keyword": {
       "type": "text"
     },
+    "seo_h1": {
+      "type": "string"
+    },
     "howtoblock": {
       "type": "json"
     }
