@@ -972,6 +972,20 @@ export interface ApiKeywordKeyword extends Schema.CollectionType {
     seo_keyword: Attribute.Text;
     seo_h1: Attribute.String;
     howtoblock: Attribute.JSON;
+    page_slug: Attribute.String;
+    short_description: Attribute.Text;
+    priority: Attribute.Integer;
+    related_keywords: Attribute.Relation<
+      'api::keyword.keyword',
+      'manyToMany',
+      'api::keyword.keyword'
+    >;
+    related_keywords_inverse: Attribute.Relation<
+      'api::keyword.keyword',
+      'manyToMany',
+      'api::keyword.keyword'
+    >;
+    localisation_keywords: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

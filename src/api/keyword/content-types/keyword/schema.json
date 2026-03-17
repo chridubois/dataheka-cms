@@ -58,6 +58,32 @@
     },
     "howtoblock": {
       "type": "json"
+    },
+    "page_slug": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "related_keywords": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::keyword.keyword",
+      "inversedBy": "related_keywords_inverse",
+      "description": "Mots-clés associés"
+    },
+    "related_keywords_inverse": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::keyword.keyword",
+      "mappedBy": "related_keywords",
+      "description": "Côté inverse (masqué dans l'admin)"
+    },
+    "localisation_keywords": {
+      "type": "json"
     }
   }
 }
